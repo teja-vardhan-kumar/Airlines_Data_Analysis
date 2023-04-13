@@ -13,12 +13,16 @@ Created Date : 13-04-2023
 """
 
 # import statements
+import sys
+import json
+import numpy as np
 import pandas as pd
 import pickle as pkl
 import configparser 
+
 from sqlalchemy import create_engine
 from utils.util import rename_columns, date_formatting, remove_prefixes,\
-                        remove_duplicates, capitalize, handle_misspslled,\
+                        remove_duplicates, capitalize, handle_misspelled,\
                         write_to_database
 
 
@@ -37,9 +41,7 @@ def perform_transformations(df, airlines_path, date_columns):
 
     """
     
-    # reads the airlines pickle file 
-    with open(airlines_path, 'rb') as file:
-        airlines_list = pkl.load(file)
+    
     
     # renaming the columns
     df.columns = rename_columns(df)
@@ -59,11 +61,43 @@ def perform_transformations(df, airlines_path, date_columns):
         if column not in date_columns:
             df[column] = capitalize(df[column])
     
+    # deserializing the airlines pickle file and storing in numpy array
+    with open(airlines_path, 'rb') as file:
+        airlines_array = np.array(pkl.load(file))
+
     # Handling missing values in airlines column
-    df['Airline'] = handle_misspslled(df['Airline'], airlines_list)
+    df['Airline'] = handle_misspelled(df['Airline'], airlines_array)
 
     return df.copy()
 
+
+def update_airlines():
+
+    """
+    This function updates realtime airline names present in airlines json file 
+    into airlines pickle file, so that storing airline names is optimized and 
+    well maintained
+
+    """
+    # creating parser object
+    config = configparser.ConfigParser()
+
+    # Reading the config file
+    config.read('config.ini')
+
+    airlines_pickle_path = config['path']['airlines_pickle_path']
+
+    airlines_json_path = config['path']['airlines_json_path']
+
+    # Read the realtime airlines json file
+    with open(airlines_json_path, 'r') as json_file:
+        json_data = json.load(json_file)['airlines']
+
+    # Serializing airlines names into pickle format to store efficiently
+    with open(airlines_pickle_path, 'wb') as pickle_file:
+        pkl.dump(json_data, pickle_file)
+
+    
 
 def main():
 
@@ -80,9 +114,9 @@ def main():
 
     date_columns = ['Booking_Date', 'Travel_Date']
 
-    airlines_path = config['path']['airlines_path']
+    airlines_path = config['path']['airlines_pickle_path']
 
-    data_file_path = config['path']['data_file_path']
+    dataset_path = config['path']['dataset_path']
 
     host = config['mysql']['host']
 
@@ -96,7 +130,7 @@ def main():
 
 
     # reads the data file using pandas
-    df = pd.read_csv(data_file_path)
+    df = pd.read_csv(dataset_path)
 
     # performing Transformations
     transformed_df = perform_transformations(df, airlines_path, date_columns)
@@ -107,7 +141,7 @@ def main():
     # writing the transformed data to the target database
     write_to_database(transformed_df, connection, table_name, date_columns )
 
-    # disposes the database connection 
+    # disposing the database connection 
     connection.dispose()
 
 
@@ -116,6 +150,12 @@ def main():
 
 
 if __name__ == '__main__':
+
+    # checking for command line argumenst
+    if sys.argv[1:2] == 'update':
+        
+        # performing updation on airlines names
+        update_airlines()
     
     # Executing main method
     main()

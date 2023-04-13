@@ -47,24 +47,24 @@ def capitalize(column):
     return column.str.capitalize()
 
 # This function replace the misspelled values 
-def replace_with_closest_match(name, airlines):
+def replace_with_closest_match(name, airlines_array):
     
-    if name.lower() in airlines:
+    if name.lower() in airlines_array:
         return name
     else:
-        closest_match = get_close_matches(name.lower(), airlines, n=1, cutoff=0.6)
+        closest_match = get_close_matches(name.lower(), airlines_array, n=1, cutoff=0.6)
         if closest_match:
             return closest_match[0].capitalize()
         else:
             return name
 
-def handle_misspslled(column, airlines_list):
+def handle_misspelled(column, airlines_array):
     """ Parameters: column (Series) :  pandas series object
                     airlines_list (list) : airlines names list 
         Returns: Series : modified pandas series object
     """
 
-    return column.apply(replace_with_closest_match, airlines = airlines_list)
+    return column.apply(replace_with_closest_match, airlines_array = airlines_array)
 
 def write_to_database(df, conn, table_name, date_columns):
     """ Parameters: df (dataframe) :  pandas dataframe
