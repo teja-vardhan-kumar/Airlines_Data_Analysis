@@ -1,0 +1,51 @@
+Booking Date,Department,Pax Name,Travel Date,Sector,Airline,Class,Flown Status
+04-01-2021,Dept_01,MR. ABG001,03-04-2021,Goa-Mumbai,Indigo,Economy,FLOWN
+04-01-2021,Dept_02,ABG002,03-02-2021,Mumbai-Goa,SpiceJet,Economy,FLOWN
+01-04-2021 00:00,Dept_03,MR. ABG003,03-04-2021,New Delhi-Ahmedabad,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_04,MR. ABG004,03-06-2021,Jodhpur-New Delhi,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_05,ABG005,03-06-2021,Vadodara-Delhi,Air India,Economy,FLOWN
+01-04-2021 00:00,Dept_06,MR. ABG006,03-03-2021,New Delhi-Udaipur,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_07,MR. ABG007,03-03-2021,Kolkata-Bangalore,Indigo,Economy,
+04-01-2021,Dept_08,MR. ABG008,03-03-2021,Delhi-Mumbai,Air India,Business,RFND
+04-01-2021,Dept_09,MR. ABG009,03-03-2021,Lucknow-Kolkata,INDIGO,Economy,FLOWN
+01-04-2021 00:00,Dept_10,MR. ABG010,03-03-2021,Delhi-Mumbai,Air India,Business,RFND
+01-04-2021 00:00,Dept_11, ABG011,03-03-2021,Delhi-Mumbai,Air Vistara,Business,FLOWN
+01-04-2021 00:00,Dept_12,ABG012,03-03-2021,Delhi-Mumbai,Air Vistara,Economy,REISSUED
+01-04-2021 00:00,Dept_01,MR. ABG013,03-03-2021,Delhi-Mumbai,Air Vistara,Business,FLOWN
+01-04-2021 00:00,Dept_02,MR. ABG014,03-03-2021,Chennai-Vijayawada,Indigo,Economy,FLOWN
+04-01-2021,Dept_03,MR. ABG015,03-03-2021,Vijayawada-Chennai,SPICEGET,Economy,
+04-01-2021,Dept_04,MR. ABG016,03-03-2021,Delhi-Bangalore,Air Asia,Economy,FLOWN
+01-04-2021 00:00,Dept_05,MR. ABG017,03-03-2021,Delhi-Bangalore,Air Asia,Economy,
+01-04-2021 00:00,Dept_06,MR. ABG018,03-03-2021,New Delhi-Mumbai,Air Vistara,Economy,FLOWN
+01-04-2021 00:00,Dept_07,MR. ABG019,03-03-2021,Mumbai-New Delhi,Air Vistara,Economy,FLOWN
+01-04-2021 00:00,Dept_08,MR. ABG020,03-03-2021,Raipur-Mumbai,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_09,MR. ABG021,03-03-2021,Delhi-Raipur,Air Vistara,Economy,FLOWN
+04-01-2021,Dept_10,MR. ABG022,03-03-2021,Mumbai-Bangalore,Air Vistara,Economy,FLOWN
+04-01-2021,Dept_11,MR. ABG023,03-03-2021,Delhi-Pune,Air Vistara,Economy,FLOWN
+01-04-2021 00:00,Dept_12,MR. ABG024,03-03-2021,Bangalore-Delhi,Air Vistara,Economy,FLOWN
+01-04-2021 00:00,Dept_01,MR. ABG025,03-03-2021,Mumbai-Hyderabad,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_02, ABG026,03-03-2021,Hyderabad-Mumbai,Air Vistara,Economy,FLOWN
+01-04-2021 00:00,Dept_03,ABG027,03-03-2021,Dharamsala-New Delhi/New Delhi-Jharsuguda,SpiceJet/SpiceJet,Economy,FLOWN/FLOWN
+01-04-2021 00:00,Dept_04,ABG028,03-03-2021,Delhi-Mumbai,Air India,Economy,FLOWN
+04-01-2021,Dept_05, ABG029,03-03-2021,Bangalore-Delhi,Air Vistara,Economy,FLOWN
+04-01-2021,Dept_06,MR. ABG030,03-03-2021,Kolkata-Raipur,Indigo,Economy,
+01-04-2021 00:00,Dept_07,MR. ABG031,03-03-2021,Kolkata-Lucknow,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_08,MR. ABG032,03-03-2021,Hyderabad-Tirupati,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_09,MR. ABG033,03-03-2021,Mumbai-Bangalore,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_10,MR. ABG034,03-03-2021,Bangalore-Mangalore,SpiceJet,Economy,
+01-04-2021 00:00,Dept_11,MR. ABG035,03-03-2021,Kolkata-Bagdogra,Indigo,Economy,FLOWN
+04-01-2021,Dept_12,MR. ABG036,03-03-2021,Bagdogra-Kolkata,Indigo,Economy,FLOWN
+04-01-2021,Dept_01,MR. ABG037,03-03-2021,Kolkata-Bagdogra,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_02,MR. ABG038,03-03-2021,Delhi-Jabalpur,Air India,Economy,FLOWN
+01-04-2021 00:00,Dept_03,MR. ABG039,03-03-2021,Jabalpur-New Delhi,SpiceJet,Economy,RFND
+01-04-2021 00:00,Dept_04,MR. ABG040,03-03-2021,Bangalore-Tiruchirappali,Indigo,Economy,
+01-04-2021 00:00,Dept_05,ABG041,03-03-2021,Tiruchirappali-Bangalore,Indigo,Economy,RFND
+01-04-2021 00:00,Dept_06,ABG042,03-03-2021,New Delhi-Mumbai,Indigo,Economy,FLOWN
+04-01-2021,Dept_07,MR. ABG043,03-03-2021,New Delhi-Bangalore,Indigo,Economy,FLOWN
+04-01-2021,Dept_08,MR. ABG044,03-03-2021,Bangalore-New Delhi,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_09,MR. ABG045,03-03-2021,Jharsuguda-Kolkata,Spicejet,Economy,FLOWN
+01-04-2021 00:00,Dept_10,MRS. ABG046,03-03-2021,Mumbai-Nagpur,Indigo/Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_11,MR. ABG047,03-03-2021,Chandigarh-Mumbai,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_12,MR. ABG048,03-03-2021,Mumbai-New Delhi,Indigo,Economy,FLOWN
+01-04-2021 00:00,Dept_13,MR. ABG049,03-03-2021,Delhi-Chandigarh,Air India,Economy,FLOWN
+04-01-2021,Dept_14,MRS. ABG050,03-03-2021,Mumbai-Jaipur,Indigo,Economy,FLOWN
