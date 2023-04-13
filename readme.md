@@ -5,6 +5,7 @@ This repository contains an ETL (Extract, Transform, Load) process for the ABG_C
 ## Prerequisites
 
 - Python 3.x installed on your system.
+- Mysql Server 8.x installed in your system 
 - Create a virtual environment using `python -m venv etl_env`.
 - Activate the environment:
   - Windows: `etl_env\Scripts\activate` in Command Prompt.
@@ -14,7 +15,10 @@ This repository contains an ETL (Extract, Transform, Load) process for the ABG_C
 ## How to Run
 
 1. Navigate to the project directory (`ABG_CASE_STUDY/etl/`).
-2. Run the ETL process using the command: `python main.py`.
+2. Update the database credentials in config.ini file
+3. Run the ETL process using the command: `python main.py`.
+4. Output can be viewed in client database (mysql)
+
 
 ## License
 
