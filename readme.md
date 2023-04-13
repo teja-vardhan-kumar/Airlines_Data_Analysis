@@ -1,6 +1,6 @@
 # ABG_CASE_STUDY ETL Process
 
-This repository contains an ETL (Extract, Transform, Load) process for the ABG_CASE_STUDY project.
+This repository contains an ETL (Extract, Transform, Load) process for the ABG_CASE_STUDY project on travel dataset.
 
 ## Prerequisites
 
