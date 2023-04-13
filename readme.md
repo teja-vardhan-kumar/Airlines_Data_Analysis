@@ -14,7 +14,7 @@ This repository contains an ETL (Extract, Transform, Load) process for the ABG_C
 
 ## How to Run
 
-1. Navigate to the project directory (`ABG_CASE_STUDY/etl/`).
+1. Navigate to the project directory (`ABG_Case_Study/etl/`).
 2. Update the database credentials in config.ini file.
 3. Run the ETL process using the command: `python main.py`.
 4. Run the script with updated airline names using the command: `python main.py update`.
