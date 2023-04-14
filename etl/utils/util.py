@@ -73,8 +73,8 @@ def write_to_database(df, conn, table_name, date_columns):
                     date_cloumns (list) : list of date column names
     """
 
-    for column in date_columns:
-        df[column] = pd.to_datetime(df[column]).dt.strftime('%Y-%m-%d')
+    #for column in date_columns:
+    #    df[column] = pd.to_datetime(df[column]).dt.strftime('%Y-%m-%d')
 
     df.to_sql(table_name, con = conn, if_exists='append', index = False,\
               chunksize=1000, method = 'multi' )
