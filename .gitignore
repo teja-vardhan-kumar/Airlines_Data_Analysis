@@ -1,1 +1,3 @@
 /etl_env
+etl/utils/__pycache__
+etl/config.ini

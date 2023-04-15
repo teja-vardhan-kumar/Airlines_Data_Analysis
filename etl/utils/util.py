@@ -22,28 +22,24 @@ def date_formatting(column):
     """ Parameters: column (Series) :  pandas series object
         Returns: Series : modified pandas series object
     """
-    
     return pd.to_datetime(column, format='mixed' ).dt.strftime('%d-%m-%Y')
 
 def remove_prefixes(column):
     """ Parameters: column (Series) :  pandas series object
         Returns: Series : modified pandas series object
     """
-
     return column.str.replace('[MR | MRS]\.?\s*', '', case=False, regex = True)
 
 def remove_duplicates(column):
     """ Parameters: column (Series) :  pandas series object
         Returns: Series : modified pandas series object
     """
-    
     return column.str.replace(r'([^/]+)/\1', r'\1', regex = True)
 
 def capitalize(column):
     """ Parameters: column (Series) :  pandas series object
         Returns: Series : modified pandas series object
     """
-    
     return column.str.capitalize()
 
 # This function replace the misspelled values 
@@ -63,7 +59,6 @@ def handle_misspelled(column, airlines_array):
                     airlines_list (list) : airlines names list 
         Returns: Series : modified pandas series object
     """
-
     return column.apply(replace_with_closest_match, airlines_array = airlines_array)
 
 def write_to_database(df, conn, table_name, date_columns):
@@ -78,3 +73,5 @@ def write_to_database(df, conn, table_name, date_columns):
 
     df.to_sql(table_name, con = conn, if_exists='append', index = False,\
               chunksize=1000, method = 'multi' )
+    
+    

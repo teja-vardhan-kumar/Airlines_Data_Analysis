@@ -41,8 +41,6 @@ def perform_transformations(df, airlines_path, date_columns):
 
     """
     
-    
-    
     # renaming the columns
     df.columns = rename_columns(df)
 
@@ -96,6 +94,7 @@ def update_airlines():
     # Serializing airlines names into pickle format to store efficiently
     with open(airlines_pickle_path, 'wb') as pickle_file:
         pkl.dump(json_data, pickle_file)
+    
 
     
 
@@ -152,8 +151,8 @@ def main():
 if __name__ == '__main__':
 
     # checking for command line argumenst
-    if sys.argv[1:2] == 'update':
-        
+    if sys.argv[1:2] == ['update']:
+
         # performing updation on airlines names
         update_airlines()
     
