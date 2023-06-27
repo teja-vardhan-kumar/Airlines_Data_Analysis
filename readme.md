@@ -1,6 +1,6 @@
 # Airlines Data ETL Process
 
-This repository contains an ETL (Extract, Transform, Load) process for Airlines Travel Dataset.
+This repository contains an ETL (Extract, Transform, Load) process for Airlines Data.
 
 ## Prerequisites
 
